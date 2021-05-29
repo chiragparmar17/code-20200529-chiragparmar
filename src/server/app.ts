@@ -1,14 +1,16 @@
 import { json } from 'body-parser';
+import config from 'config';
 import cors from 'cors';
 import express, { Application, Request, Response } from 'express';
 import * as expressWinston from 'express-winston';
 import * as http from 'http';
 import * as winston from 'winston';
+import { initialize } from '../dbhelper/mongoose';
 import { Router } from './routes';
 
 const app: Application = express();
 const server: http.Server = http.createServer(app);
-const port = 3000;
+const port = config.get('expressPort');
 
 app.use(json());
 app.use(cors());
@@ -35,6 +37,7 @@ app.get('/', (req: Request, res: Response) => {
   res.status(200).send(`Server running at http://localhost:${port}`);
 });
 
-server.listen(port, () => {
+server.listen(port, async () => {
   console.log(`Server running at http://localhost:${port}`);
+  await initialize();
 });

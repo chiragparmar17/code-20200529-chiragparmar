@@ -1,4 +1,7 @@
 {
   "expressPort": "HTTP_PORT",
-  "environment": "NODE_ENV"
+  "environment": "NODE_ENV",
+  "mongoose": {
+    "url": "MONGOOSE_URL"
+  }
 }
