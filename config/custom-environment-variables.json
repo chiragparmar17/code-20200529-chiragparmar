@@ -1,0 +1,4 @@
+{
+  "expressPort": "HTTP_PORT",
+  "environment": "NODE_ENV"
+}
