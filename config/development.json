@@ -1,6 +1,9 @@
 {
   "environment": "development",
   "mongoose": {
-    "url": "mongodb://localhost:27017/bmidb"
+    "url": "mongodb+srv://mongodb:mongodb123@mongodb-cluster.vwfpl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  },
+  "log": {
+    "level": "debug"
   }
 }

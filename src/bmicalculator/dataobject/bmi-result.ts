@@ -6,12 +6,17 @@ interface BMIResultModelInterface extends mongoose.Model<BMIResultDocument> {
 }
 
 interface BMIResultDocument extends mongoose.Document {
+  id: number;
   bmi: number;
   category: string;
   healthRisk: string;
 }
 
 const bmiResultSchema = new mongoose.Schema({
+  id: {
+    type: Number,
+    required: true
+  },
   bmi: {
     type: Number,
     required: true
