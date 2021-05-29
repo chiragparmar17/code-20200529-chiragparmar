@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { BMIResult } from '../model/bmi-result.model';
+import { BMIResult } from '../model/bmi-result';
 
 interface BMIResultModelInterface extends mongoose.Model<BMIResultDocument> {
   build(bmiResult: BMIResult): BMIResultDocument;

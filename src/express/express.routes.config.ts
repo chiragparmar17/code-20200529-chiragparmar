@@ -2,16 +2,16 @@ import { Application } from 'express';
 
 export abstract class ExpressRoutesConfig {
   app: Application;
-  routeName: string;
+  route: string;
 
   constructor(app: Application, routeName: string) {
     this.app = app;
-    this.routeName = routeName;
+    this.route = routeName;
     this.configure();
   }
 
   getName() {
-    return this.routeName;
+    return this.route;
   }
 
   abstract configure(): void;

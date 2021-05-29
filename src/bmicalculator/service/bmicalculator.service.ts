@@ -1,8 +1,8 @@
 import logger from '../../shared/logger';
 import { PersonData } from '../../shared/models/person-data.interface';
-import { BMIResultModel } from '../dataobject/bmi-result';
+import { BMIResultModel } from '../dataobject/bmi-result.model';
 import { BMICategory } from '../model/bmi-category.enum';
-import { BMIResult } from '../model/bmi-result.model';
+import { BMIResult } from '../model/bmi-result';
 import { HealthRisk } from '../model/health-risk.enum';
 
 export function getBMIResult(bmi: number, id: number): BMIResult {
